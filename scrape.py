@@ -1,6 +1,8 @@
 from bs4 import BeautifulSoup
 import requests
+#Importing required tools
 
+#Using URL to scrape website into "soup" variable
 url = "https://webscraper.io/test-sites/e-commerce/static/computers/laptops"
 result = requests.get(url)
 soup = BeautifulSoup(result.text, "html.parser")
@@ -17,4 +19,5 @@ for listing in listings:
 
 if not texts:
     print("No elements found.")
+#If there is no element print "Not Found
 
